@@ -1,0 +1,29 @@
+.main_about_top{
+    background-color: #1F1F1F;
+    background-image: url('mainAboutTopBg.png');
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 4rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.main_about_top_title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4rem;
+    width: 100%;
+}
+.main_about_top_title h1{
+    font-size: 5.3rem;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    text-align: right;
+}
+.pink_text{
+    color: #A1147A;
+}

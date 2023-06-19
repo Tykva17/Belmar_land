@@ -1,0 +1,26 @@
+.main_about_partners{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-right: 1px solid #f1f1f1;
+    background-color: #1F1F1F;
+}
+
+.main_about_partners_title h1{
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.main_about_partners_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 0;
+}
+.main_about_partners_list_item{
+    margin: 1rem 0;
+}

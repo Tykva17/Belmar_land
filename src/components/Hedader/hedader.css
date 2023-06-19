@@ -1,0 +1,6 @@
+.home_hedader{
+    display: grid;
+    grid-template-columns: auto 170px;
+    grid-template-rows: max-content;
+    border-bottom: 1px solid #f1f1f1;
+}
