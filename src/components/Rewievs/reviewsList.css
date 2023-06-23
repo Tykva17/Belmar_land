@@ -1,0 +1,13 @@
+.reviews{
+    background-color: #1F1F1F;
+    padding: 4rem 3rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.reviews_box-title{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4rem;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}

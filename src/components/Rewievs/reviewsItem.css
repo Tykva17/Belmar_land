@@ -1,0 +1,60 @@
+.review_item_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review_item{
+    display: grid;
+    grid-template-areas:
+    'Item_img Item_name Item_name'
+    'Item_img . Item_text'
+    'Item_img . Item_text';
+    max-width: 1000px;
+}
+
+.review_item_img{
+    grid-area: Item_img;
+    padding: 0 2rem;
+}
+.review_item_name{
+    grid-area: Item_name;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+}
+.review_item_name h3{
+    margin: 0 10px 0 0;
+    color: #f1f1f1;
+    font-size: 1.6rem;
+}
+
+.review_item_text{
+    grid-area: Item_text;
+    max-width: 800px;
+    color: #f1f1f1;
+    font-size: 1.3rem;
+    padding: 0 0 0 2rem;
+}
+.reviews_slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slick-slider{
+    display: flex!important;
+    padding: 3rem 0;
+}
+
+.arrow_slider{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.arrow_slider img{
+    width: 30px;
+}
+
+.prev_arrow img{
+    transform: rotate(180deg);
+}
