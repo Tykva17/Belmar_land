@@ -63,3 +63,17 @@
     width: 100%;
     height: 44vh;
 }
+
+@media all and (max-width: 480px){
+    .hedader_bottom_scode,.hedader_bottom_info_circle_text{
+        display: none;
+    }
+    .hedader_bottom{
+        grid-template-columns: 2fr 100px;
+        grid-template-rows: auto;
+    }
+    .hedader_bottom_info_box_text{
+        font-size: 1.6rem;
+        max-width: 100%;
+    }
+}

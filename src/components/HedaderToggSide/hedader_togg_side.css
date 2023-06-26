@@ -67,4 +67,15 @@ input.hedader_togg_side_input:checked + span.hedader_togg_side_span {
 input.hedader_togg_side_input:checked + span.hedader_togg_side_span:before {
     transform: translateX(29px);
 }
-
+@media all and (max-width: 480px){
+    .hedader_togg_side_rot{
+        transform: rotate(0deg);
+        min-width: auto;
+    }
+    .hedader_togg_side_tittle{
+        font-size: 1.4rem;
+    }
+    .hedader_togg_side{
+        border-left: none;
+    }
+}

@@ -52,3 +52,21 @@
 .hedader_top_info_title.right{
     grid-area: right;
 }
+
+@media all and (max-width: 480px){
+    .hedader_top {
+        display: grid;
+        grid-template-columns: 110px auto;
+        grid-template-rows: auto;
+    }
+    .hedader_top_info_imgs{
+        display: none;
+    }
+    .hedader_top_info_title{
+        font-size: 1.8rem;
+    }
+    .hedader_top_cirkles img{
+        width: 110px;
+    }
+
+}

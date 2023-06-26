@@ -4,3 +4,10 @@
     grid-template-rows: max-content;
     border-bottom: 1px solid #f1f1f1;
 }
+
+@media all and (max-width: 480px){
+    .home_hedader{
+        display: flex;
+        flex-direction: column;
+    }
+}

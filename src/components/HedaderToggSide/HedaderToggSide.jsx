@@ -12,8 +12,8 @@ export default function HedaderToggSide(){
     return (
         <div className='hedader_togg_side'>
             <div className='hedader_togg_side_rot'>
-                <div className='hedader_togg_side_tittle'>
-                    <h3>Affiliate</h3>
+                <div >
+                    <h3 className='hedader_togg_side_tittle'>Affiliate</h3>
                 </div>
                 <div>
                     <label className='hedader_togg_side_label'>
