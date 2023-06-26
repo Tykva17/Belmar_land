@@ -31,3 +31,18 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media all and (max-width: 480px){
+    .main_about_bottom{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main_about_bottom_box-left{
+        padding: 1rem 1rem 0;
+    }
+    .main_about_bottom_box-right{
+        padding: 0 1rem 1rem;
+    }
+}

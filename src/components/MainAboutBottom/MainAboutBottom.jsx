@@ -1,6 +1,6 @@
 import './main_about_bottom.css'
 
-export default function MainAboutBottom(){
+export default function MainAboutBottom({isMobileTitle}){
 
     return(
         <div className='main_about_bottom'>
@@ -8,9 +8,10 @@ export default function MainAboutBottom(){
                 <h3 className="main_about_bottom_box_title">
                     about us
                 </h3>
-                <span className="main_about_bottom_link">
+                {isMobileTitle ? false :
+                (<span className="main_about_bottom_link">
                     explore
-                </span>
+                </span>)}
             </div>
             <div className='main_about_bottom_box-right'>
                 <p>
@@ -19,6 +20,10 @@ export default function MainAboutBottom(){
                 <p>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+                {isMobileTitle ?
+                    (<span className="main_about_bottom_link">
+                    explore
+                </span>) : false }
             </div>
         </div>
     )

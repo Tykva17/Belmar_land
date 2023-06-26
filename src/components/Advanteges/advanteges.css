@@ -69,3 +69,9 @@
     padding: 1.5rem;
     cursor: pointer;
 }
+
+@media all and (max-width: 480px){
+    .advanteges{
+
+    }
+}
