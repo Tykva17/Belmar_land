@@ -21,7 +21,7 @@ export default function MainAbout(){
 
     return(
         <div className='main_about'>
-            <MainAboutPartners/>
+            <MainAboutPartners isMobileTitle={isMobileTitle}/>
             <div>
                 <MainAboutTop isMobileTitle={isMobileTitle}/>
                 <MainAboutBottom isMobileTitle={isMobileTitle}/>

@@ -1,5 +1,6 @@
 import './events.css';
 import EventItem from "./EventItem";
+import OverflowScrolling from 'react-overflow-scrolling';
 
 export default function EventsBox(){
 
@@ -10,13 +11,15 @@ export default function EventsBox(){
                 <h1 className='events_header_title'>events</h1>
                 <span className='events_header_link'>see all</span>
             </div>
-            <div className='events_list'>
+            <OverflowScrolling className='overflow-scrolling-events events_list'>
                 <EventItem/>
-                <div className='event_main_line'></div>
+                {/*<div className='event_main_line'></div>*/}
                 <EventItem/>
-                <div className='event_main_line'></div>
                 <EventItem/>
-            </div>
+                <EventItem/>
+                <EventItem/>
+                <EventItem/>
+            </OverflowScrolling>
         </div>
     )
 }

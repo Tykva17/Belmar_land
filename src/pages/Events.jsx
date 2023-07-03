@@ -1,8 +1,10 @@
+import PagesHedader from "../components/PagesHedader/PagesHedader";
+
 export default function Events(){
 
     return(
         <div>
-            <h1>Events</h1>
+            <PagesHedader title={"events"}/>
         </div>
     )
 }

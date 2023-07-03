@@ -74,6 +74,8 @@ input.hedader_togg_side_input:checked + span.hedader_togg_side_span:before {
     }
     .hedader_togg_side_tittle{
         font-size: 1.4rem;
+        margin: 0 10px;
+        width: auto ;
     }
     .hedader_togg_side{
         border-left: none;

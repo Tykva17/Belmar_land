@@ -48,9 +48,11 @@
 }
 .hedader_top_info_title.left{
     grid-area: left;
+    text-align: left;
 }
 .hedader_top_info_title.right{
     grid-area: right;
+    text-align: right;
 }
 
 @media all and (max-width: 480px){
@@ -65,8 +67,17 @@
     .hedader_top_info_imgs{
         display: none;
     }
+    .hedader_top_info_titles{
+        display: grid;
+        grid-template-areas:
+        'left'
+        'right';
+        margin: auto;
+        width: 100%;
+    }
     .hedader_top_info_title{
-        font-size: 1.8rem;
+        font-size: 2.3rem;
+        width: 100%;
     }
     .hedader_top_cirkles img{
         width: 110px;

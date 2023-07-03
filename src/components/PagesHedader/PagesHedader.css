@@ -1,0 +1,37 @@
+.about_hedader_top{
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 50vh;
+    border-bottom: 1px solid #f1f1f1;
+}
+.about_hedader_top_info_titles{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 3rem;
+}
+.about_hedader_top_info_title{
+    text-align: right;
+    width: 100%;
+    font-size: 7.5rem;
+    color: #f1f1f1;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media all and (max-width: 480px){
+    .about_hedader_top{
+        display: grid;
+        grid-template-columns: 140px auto;
+        grid-template-rows: auto;
+    }
+    .about_hedader_top_info_titles{
+        padding: 1rem;
+    }
+    .about_hedader_top_info_title{
+        font-size: 2.2rem;
+    }
+}

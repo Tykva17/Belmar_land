@@ -1,10 +1,13 @@
+import PagesHedader from "../components/PagesHedader/PagesHedader";
+import PageAboutMainInfo from "../components/PageAboutMainInfo/PageAboutMainInfo";
 
 
 export default function AboutUs(){
 
     return(
         <div>
-            <h1>About Us</h1>
+            <PagesHedader title={"about us"}/>
+            <PageAboutMainInfo/>
         </div>
     )
 }

@@ -38,23 +38,32 @@
         text-align: left;
         font-size: 1.8rem;
     }
-    .main_about_partners_list{
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 2rem 0 2rem 3rem;
-        width: 100%;
-        overflow-x: scroll;
-        white-space: nowrap;
-    }
+    /*.main_about_partners_list{*/
+    /*    flex-direction: row;*/
+    /*    justify-content: flex-start;*/
+    /*    align-items: center;*/
+    /*    padding: 2rem 0 2rem 3rem;*/
+    /*    width: 100%;*/
+    /*    overflow-x: scroll;*/
+    /*    white-space: nowrap;*/
+    /*}*/
     .main_about_partners_list_item {
-        display: inline-block;
+        display: block;
         width: 200px;
         height: auto;
-        margin: 0 3rem 0 0;
+        margin: 0 2rem 0 0;
     }
-    .main_about_partners_list_item:last-child{
+    .overflow-scrolling:last-child{
         margin: 0;
     }
-
+    .overflow-scrolling{
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        /*width: 100vw;*/
+        width: calc(100vw - 1rem);
+    }
 }

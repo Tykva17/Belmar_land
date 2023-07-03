@@ -4,7 +4,6 @@ import MarqueeLine from "../components/MarqueeLine/MarqueeLine";
 import Advanteges from "../components/Advanteges/Advanteges";
 import ReviewList from "../components/Rewievs/RewievsList";
 import EventsBox from "../components/EventsBox/EventsBox";
-import Footer from "../components/Footer/Footer";
 
 
 export default function Home(){
@@ -14,9 +13,8 @@ export default function Home(){
             <MainAbout/>
             <MarqueeLine/>
             <Advanteges/>
-            {/*<ReviewList/>*/}
-            {/*<EventsBox/>*/}
-            {/*<Footer/>*/}
+            <ReviewList/>
+            <EventsBox/>
         </>
     )
 }
