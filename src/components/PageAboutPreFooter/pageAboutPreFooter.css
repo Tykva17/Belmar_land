@@ -1,0 +1,98 @@
+.page_about_prefooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    min-height: 350px;
+}
+.page_about_prefooter_box{
+    flex: 50% 1;
+    padding: 3rem 3rem 0;
+}
+.page_about_prefooter_box-title{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    margin: 0;
+}
+.page_about_prefooter_box-text{
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    max-width: 700px;
+}
+
+.dvd_animation_box{
+    background-color: #1F1F1F;
+    margin: 0 auto;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    /*box-shadow: inset 0 0 20px #155;*/
+    /*border-radius: 20px;*/
+    border-right: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    overflow: hidden;
+}
+
+.dvd_animation_box img {
+    display: block;
+    width: 200px;
+    height: auto;
+    /*border-radius: 50%;*/
+    /*background-color: #999999;*/
+    /*box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);*/
+    position: absolute;
+    -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    -o-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+@media all and (max-width: 480px){
+    .page_about_prefooter{
+        flex-direction: column-reverse;
+        padding: 1px 0;
+    }
+    .dvd_animation_box{
+        width: 95vw;
+        height: 280px;
+    }
+    .dvd_animation_box img{
+        width: 160px;
+    }
+    .page_about_prefooter_box{
+        border-top: 1px solid #f1f1f1;
+        padding: 2rem 1.4rem;
+    }
+    .page_about_prefooter_box-title{
+        font-size: 2.2rem;
+    }
+    .page_about_prefooter_box-text{
+        font-size: 1rem;
+    }
+}
+
+@-webkit-keyframes moveX {
+    from { left: 0; } to { left: 60%; }
+}
+@-moz-keyframes moveX {
+    from { left: 0; } to { left: 60%; }
+}
+@-o-keyframes moveX {
+    from { left: 0; } to { left: 60%; }
+}
+@keyframes moveX {
+    from { left: 0; } to { left: 60%; }
+}
+
+@-webkit-keyframes moveY {
+    from { top: 0; } to { top: 74%; }
+}
+@-moz-keyframes moveY {
+    from { top: 0; } to { top: 74%; }
+}
+@-o-keyframes moveY {
+    from { top: 0; } to { top: 74%; }
+}
+@keyframes moveY {
+    from { top: 0; } to { top: 74%; }
+}
