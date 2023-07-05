@@ -1,6 +1,6 @@
 import PagesHedader from "../components/PagesHedader/PagesHedader";
 import CompanyContactList from "../components/CompannyContactList/CompanyContactList";
-import ContactForm from "../components/ContactForm/ContactForm";
+import CompanyContactBox from "../components/CompanyContactBox/CompanyContactBox";
 
 export default function Contacts(){
 
@@ -8,7 +8,7 @@ export default function Contacts(){
         <div>
             <PagesHedader title={"contacts"}/>
             <CompanyContactList/>
-            <ContactForm/>
+            <CompanyContactBox/>
         </div>
     )
 }

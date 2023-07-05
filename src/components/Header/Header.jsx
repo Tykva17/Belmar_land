@@ -3,14 +3,17 @@ import './header.css';
 import menuBtn from '../../images/mdi-light_menu.png';
 import mobMenuClose from '../../images/mob-close.svg';
 import {useState} from "react";
+import classnames from "classnames";
 
 export default function Header(){
 
     const [showMenu, setShowMenu] = useState(false);
+    const [activeItem, setActiveItem] = useState('home');
 
     const navigate = useNavigate();
     const handleAlbumClick = (page) => {
         navigate(`/${page}`);
+        setActiveItem(page);
     };
 
     const menuToggler = () => {
@@ -25,9 +28,9 @@ export default function Header(){
                 </div>
                 <div className='navbar_links'>
                     <div className="navbar_links_container">
-                        <button onClick={() => handleAlbumClick('about_us')}>about us</button>
-                        <button onClick={() => handleAlbumClick('events')}>events</button>
-                        <button onClick={() => handleAlbumClick('contacts')}>contacts</button>
+                        <button className={classnames('navbar_links_container-item', { 'active': activeItem === 'about_us' })} onClick={() => handleAlbumClick('about_us')}>about us</button>
+                        <button className={classnames('navbar_links_container-item', { 'active': activeItem === 'events' })} onClick={() => handleAlbumClick('events')}>events</button>
+                        <button className={classnames('navbar_links_container-item', { 'active': activeItem === 'contacts' })} onClick={() => handleAlbumClick('contacts')}>contacts</button>
                     </div>
                 </div>
                 <div className='lang'>
@@ -43,9 +46,9 @@ export default function Header(){
                                 <img onClick={menuToggler} src={mobMenuClose} alt=""/>
                             </div>
                             <div className="mob_menu_links_container">
-                                <button onClick={() => handleAlbumClick('about_us')}>about us</button>
-                                <button onClick={() => handleAlbumClick('events')}>events</button>
-                                <button onClick={() => handleAlbumClick('contacts')}>contacts</button>
+                                <button className={classnames('mob_menu_links_container-item', { 'active': activeItem === 'about_us' })} onClick={() => handleAlbumClick('about_us')}>about us</button>
+                                <button className={classnames('mob_menu_links_container-item', { 'active': activeItem === 'events' })} onClick={() => handleAlbumClick('events')}>events</button>
+                                <button className={classnames('mob_menu_links_container-item', { 'active': activeItem === 'contacts' })} onClick={() => handleAlbumClick('contacts')}>contacts</button>
                             </div>
                         </div>) : false
                 }

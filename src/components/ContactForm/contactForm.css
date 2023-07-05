@@ -9,6 +9,18 @@
 .form_box{
     margin: 1rem 0;
     width: 100%;
+    position: relative;
+}
+
+.form_label{
+    position: relative;
+    top: 40%;
+    transition: 0.4s;
+    color: #f1f1f1;
+}
+.form_label.active{
+    top: 0;
+    transition: 0.4s;
 }
 
 .form_input{
@@ -19,10 +31,20 @@
     border: none;
     border-bottom: 2px solid #f1f1f1;
     outline: none;
-    padding: 10px 0;
-    font-size: 1.2rem;
+    padding: 16px 0;
+    font-size: 1.4rem;
     color: #f1f1f1;
 }
+
+input.form_input:-webkit-autofill{
+    background-color: #1F1F1F!important;
+    color: #f1f1f1!important;
+    font-size: 1.4rem;
+    transition: font-size, color, background-color 5000s ease-in-out 0s;
+
+}
+
+
 .form_input.error{
     border-bottom: 2px solid red;
 }

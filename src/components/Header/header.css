@@ -34,7 +34,7 @@
     align-items: center;
 }
 
-.navbar_links_container button{
+.navbar_links_container-item{
     font-size: 1rem;
     background-color: rgba(25,25,25,0);
     color: #f1f1f1;
@@ -42,6 +42,9 @@
     text-transform: uppercase;
     cursor: pointer;
     margin: 0 1.5rem;
+}
+.navbar_links_container-item.active{
+    color: #57F09E;
 }
 .navbar_links_container:last-child{
     margin-right: 2.5rem;
@@ -123,7 +126,7 @@
         align-items: center;
     }
 
-    .mob_menu_links_container button{
+    .mob_menu_links_container-item{
         border: none;
         background: none;
         font-size: 1.5rem;
@@ -131,5 +134,8 @@
         font-weight: bold;
         text-transform: uppercase;
 
+    }
+    .mob_menu_links_container-item.active{
+        color: #57F09E;
     }
 }

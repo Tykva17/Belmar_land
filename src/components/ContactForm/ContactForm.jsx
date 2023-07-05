@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './contactForm.css';
 
 const validationSchema = Yup.object().shape({
-    name: Yup.string().required('Поле "" є обовязковим'),
-    email: Yup.string().email('Неправильний формат електронної пошти').required('Поле "Електронна пошта" є обовязковим'),
+    name: Yup.string().required('Поле є обовязковим'),
+    email: Yup.string().matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        'Неправильний формат електронної пошти').required('Поле "Електронна пошта" є обовязковим'),
     comment: Yup.string().required('Поле "Коментар" є обовязковим'),
 });
+
 
 const ContactForm = () => {
     const formik = useFormik({
@@ -16,50 +19,81 @@ const ContactForm = () => {
             email: '',
             comment: '',
         },
+        handleChange: event => {
+            const { name, value } = event.target;
+            formik.setFieldValue(name, value);
+        },
         validationSchema: validationSchema,
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
         },
     });
+    const [focusedName, setFocusedName] = useState(false);
+    const [focusedEmail, setFocusedEmail] = useState(false);
+    const [focusedComment, setFocusedComment] = useState(false);
+    const handleFocusName = () => {
+        setFocusedName(true);
+    };
+    const handleBlurName = () => {
+        setFocusedName(false);
+    };
+    const handleFocusEmail = () => {
+        setFocusedEmail(true);
+    };
+    const handleBlurEmail = () => {
+        setFocusedEmail(false);
+    };
+    const handleFocusComment = () => {
+        setFocusedComment(true);
+    };
+    const handleBlurComment = () => {
+        setFocusedComment(false);
+    };
 
     return (
         <form className='form_submit' onSubmit={formik.handleSubmit}>
             <div className='form_box'>
-                <label className='form_label' htmlFor="name">Name:</label>
+                <label
+                    className={`form_label ${focusedName || formik.values.name ? 'active' : ''}`}
+                >Name</label>
                 <input
-                    className={formik.touched.name && formik.errors.name ? 'error form_input' : 'form_input'}
-                    id="name"
-                    name="name"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    className={formik.errors.name ? 'error form_input' : 'form_input'}
+                    id='name'
+                    type='name'
                     value={formik.values.name}
+                    onChange={formik.handleChange}
+                    onFocus={handleFocusName}
+                    onBlur={handleBlurName}
                 />
-
             </div>
 
             <div className='form_box'>
-                <label className='form_label' htmlFor="email">E-mail:</label>
+                <label
+                    className={`form_label ${focusedEmail || formik.values.email ? 'active' : ''}`}
+                >Email</label>
                 <input
-                    className={formik.touched.email && formik.errors.email ? 'error form_input' : 'form_input'}
-                    id="email"
-                    name="email"
-                    type="email"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    className={formik.errors.email ? 'error form_input' : 'form_input'}
+                    id='email'
+                    type='email'
                     value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onFocus={handleFocusEmail}
+                    onBlur={handleBlurEmail}
                 />
             </div>
 
             <div className='form_box'>
-                <label className='form_label' htmlFor="comment">Lorem ipsum dolor:</label>
-                <textarea
-                    className={formik.touched.comment && formik.errors.comment ? 'error form_input' : 'form_input'}
-                    id="comment"
-                    name="comment"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                <label
+                    className={`form_label ${focusedComment || formik.values.comment ? 'active' : ''}`}
+                >Comment</label>
+                <input
+                    className={formik.errors.comment ? 'error form_input' : 'form_input'}
+                    id='comment'
+                    type='comment'
                     value={formik.values.comment}
+                    onChange={formik.handleChange}
+                    onFocus={handleFocusComment}
+                    onBlur={handleBlurComment}
                 />
             </div>
 
