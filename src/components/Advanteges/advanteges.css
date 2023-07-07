@@ -39,6 +39,9 @@
     display: flex!important;
     padding: 3rem 0;
 }
+.slick-list{
+    max-width: 80vw;
+}
 
 .advanteges_main_box{
     /*max-width: 500px;*/
@@ -59,7 +62,7 @@
 }
 .advanteges_main h2{
     grid-area: advTitle;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     color: #f1f1f1;
     text-transform: uppercase;
 }
@@ -79,6 +82,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    max-width: 100px;
     height: 100%;
     padding: 1.5rem;
     cursor: pointer;

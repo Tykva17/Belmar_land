@@ -64,6 +64,7 @@
     text-transform: uppercase;
     font-weight: 400;
     margin-left: 4rem;
+    cursor: pointer;
 }
 .navbar_link_mob{
     display: none;
@@ -89,10 +90,12 @@
     .lang{
         border-left: none;
         justify-content: flex-end;
+        cursor: pointer;
     }
     .lang h1{
         font-size: 1.65rem;
         margin-left: 1rem;
+        cursor: pointer;
     }
 
     .mob_menu{

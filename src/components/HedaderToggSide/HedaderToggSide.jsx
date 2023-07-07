@@ -1,18 +1,24 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './hedader_togg_side.css';
+import LanguageContext from "../../LanguageContext/LanguageContext";
+import {useContext} from "react";
 
 export default function HedaderToggSide(){
 
-    const [isToggled, toggle] = useState(true)
+    const { changeAffAdv } = useContext(LanguageContext);
+    const [isToggled, toggle] = useState(true); // aff ==> true , adv ==> false
+
+
 
     const callback = () => {
-        toggle(!isToggled)
+        toggle(!isToggled);
+        isToggled ? changeAffAdv('aff') : changeAffAdv('adv');
     }
 
     return (
         <div className='hedader_togg_side'>
             <div className='hedader_togg_side_rot'>
-                <div >
+                <div className='aff_side'>
                     <h3 className='hedader_togg_side_tittle'>Affiliate</h3>
                 </div>
                 <div>
@@ -22,7 +28,7 @@ export default function HedaderToggSide(){
 
                     </label>
                 </div>
-                <div>
+                <div className='adv_side'>
                     <h3 className='hedader_togg_side_tittle'>Advertiser</h3>
                 </div>
             </div>

@@ -2,7 +2,10 @@ import "./hedader_bottom.css";
 import scode from '../../images/s_code.png';
 import gradient from '../../images/gradient.png';
 import circle_text from '../../images/circle_text.png';
+import LanguageContext from "../../LanguageContext/LanguageContext";
+import {useContext} from "react";
 export default function HedaderBottom(){
+    const { translations } = useContext(LanguageContext);
 
 
     return(
@@ -10,7 +13,7 @@ export default function HedaderBottom(){
             <div className='hedader_bottom_info'>
                 <div className='hedader_bottom_info_box'>
                     <p className='hedader_bottom_info_box_text'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        {translations.mainPageSubtitle}
                     </p>
                 </div>
                 <div className='hedader_bottom_info_circle_text'>

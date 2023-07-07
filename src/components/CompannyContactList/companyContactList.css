@@ -36,3 +36,24 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media all and (max-width: 480px){
+    .company_contacts_list{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    .company_contacts_list_item{
+        border-right: none;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .company_contacts_list_item:last-child{
+        border-bottom: none;
+    }
+    .company_contacts_list-title{
+        font-size: 1.6rem;
+    }
+    .company_contacts_list-example{
+        font-size: 1.4rem;
+    }
+}

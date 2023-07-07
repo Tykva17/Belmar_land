@@ -2,17 +2,21 @@ import React, {useState} from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './contactForm.css';
+import LanguageContext from "../../LanguageContext/LanguageContext";
+import {useContext} from "react";
+
 
 const validationSchema = Yup.object().shape({
     name: Yup.string().required('Поле є обовязковим'),
-    email: Yup.string().matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-        'Неправильний формат електронної пошти').required('Поле "Електронна пошта" є обовязковим'),
+    email: Yup.string().required('Поле "Електронна пошта" є обовязковим'),
     comment: Yup.string().required('Поле "Коментар" є обовязковим'),
 });
 
 
 const ContactForm = () => {
+
+    const { translations } = useContext(LanguageContext);
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -55,7 +59,7 @@ const ContactForm = () => {
             <div className='form_box'>
                 <label
                     className={`form_label ${focusedName || formik.values.name ? 'active' : ''}`}
-                >Name</label>
+                >{translations.contactFormLabelList[0]}</label>
                 <input
                     className={formik.errors.name ? 'error form_input' : 'form_input'}
                     id='name'
@@ -70,11 +74,11 @@ const ContactForm = () => {
             <div className='form_box'>
                 <label
                     className={`form_label ${focusedEmail || formik.values.email ? 'active' : ''}`}
-                >Email</label>
+                >{translations.contactFormLabelList[1]}</label>
                 <input
                     className={formik.errors.email ? 'error form_input' : 'form_input'}
                     id='email'
-                    type='email'
+                    type='text'
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     onFocus={handleFocusEmail}
@@ -85,7 +89,7 @@ const ContactForm = () => {
             <div className='form_box'>
                 <label
                     className={`form_label ${focusedComment || formik.values.comment ? 'active' : ''}`}
-                >Comment</label>
+                >{translations.contactFormLabelList[2]}</label>
                 <input
                     className={formik.errors.comment ? 'error form_input' : 'form_input'}
                     id='comment'
@@ -97,7 +101,7 @@ const ContactForm = () => {
                 />
             </div>
 
-            <button className='form_submit_btn' type="submit">Send</button>
+            <button className='form_submit_btn' type="submit">{translations.contactFormSubmit}</button>
         </form>
     );
 };

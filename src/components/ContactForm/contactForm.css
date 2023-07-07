@@ -58,3 +58,14 @@ input.form_input:-webkit-autofill{
     border: none;
     outline: none;
 }
+
+@media all and (max-width: 480px){
+    .form_submit{
+        padding: 2rem;
+    }
+    .form_submit_btn{
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        margin-top: 20px;
+    }
+}

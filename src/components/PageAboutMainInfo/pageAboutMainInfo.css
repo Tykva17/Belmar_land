@@ -15,7 +15,7 @@
     padding: 0 2rem;
 }
 .page_about_main_info_title{
-    font-size: 4.2rem;
+    font-size: 2rem;
     color: #f1f1f1;
     font-weight: 600;
     text-transform: uppercase;
@@ -63,7 +63,7 @@
     }
     .page_about_main_info_title{
         margin: 2rem 0;
-        font-size: 2.4rem;
+        font-size: 1.1rem;
     }
     .page_about_main_info_text-box{
         border-left: none;
@@ -78,6 +78,6 @@
     }
     .page_about_main_info_text{
         flex: 100%;
-        font-size: 1.35rem;
+        font-size: 1.1rem;
     }
 }

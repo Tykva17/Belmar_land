@@ -72,9 +72,15 @@ input.hedader_togg_side_input:checked + span.hedader_togg_side_span:before {
         transform: rotate(0deg);
         min-width: auto;
     }
+    .aff_side{
+        margin: 0 10px 0 0;
+    }
+    .adv_side{
+        margin: 0 0 0 10px;
+    }
     .hedader_togg_side_tittle{
         font-size: 1.4rem;
-        margin: 0 10px;
+        margin: 0 ;
         width: auto ;
     }
     .hedader_togg_side{

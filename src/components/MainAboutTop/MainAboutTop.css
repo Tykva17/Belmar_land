@@ -24,7 +24,7 @@
     color: #f1f1f1;
     text-align: right;
 }
-.pink_text{
+.pink_title{
     color: #A1147A;
     margin-left: 1rem;
 }
@@ -38,7 +38,7 @@
         padding: 0;
     }
     .main_about_top_title h1{
-        font-size: 3.4rem;
+        font-size: 2.2rem;
         margin-bottom: 1rem;
     }
 
