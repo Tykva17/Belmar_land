@@ -5,9 +5,11 @@ import {useContext} from "react";
 export default function MainAboutTop ({isMobileTitle}){
 
     const { translations } = useContext(LanguageContext);
+    const bgImage = { img : require('./mainAboutTopBg.png') }
+
 
     return(
-        <div className='main_about_top'>
+        <div className='main_about_top' style={{backgroundImage: `url("${bgImage.img}")`}}>
             <div className='main_about_top_title'>
                 <h1>
                     {translations.mainPagePartnersMainTitle[0]} <br/>

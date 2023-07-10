@@ -1,0 +1,71 @@
+
+
+
+  {
+    "navBarItems" : ["about us", "events", "contacts"],
+    "toggleLang" : "ua",
+    "mainPageTitle1" : "BELMARKETING",
+    "mainPageTitle2" : "FOR PARTNERS",
+    "mainPageSubtitle" : "There is no such thing as low-quality traffic — there are wrong partners. You will forget about all possible traffic problems by working with us because we know how to simplify complex workflows. Therefore, our team of professionals will ensure that you can enjoy the process of making a profit without any unnecessary worries.\nCreated by webmasters for webmasters.\n",
+    "mainPagePartnersTitle" : "Our sources",
+    "mainPagePartnersList" : ["Partner1","Partner2","Partner3","Partner4"],
+    "mainPagePartnersMainTitle" : ["REALIZE"," YOUR BRAVEST IDEAS"," WITH US"],
+    "mainPagePartnersMainSubTitle" : "About Us",
+    "mainPagePartnersMainMoreBtn" : "explore",
+    "mainPagePartnersMainText" : "Our company has many years of experience in creating successful projects in the crypto vertical. This has allowed us to create an affiliate program with impeccable service and a systematic approach to work processes. We always provide high-quality traffic for advertisers and help webmasters get the best deals.\nWe do not follow the market. We set new standards for it.\n",
+    "mainMarquee" : "Here could be your advertisement!",
+    "mainPageAdvantegesTitle" : "Our Advantages",
+    "mainPageAdvantegesList" : ["High-quality conversion","Exclusive traffic sources","Lowest market margins","Daily profitability analytics", "Experience in the internal media buying team"],
+    "aboutTopTitle" : "ABOUT US",
+    "aboutMainTitle" : "Let's move together with BelmarMarketing and unleash the potential with our joint efforts.",
+    "aboutMainText" : "Many years of experience creating successful crypto vertical projects allowed us to create an affiliate program with impeccable service and approach to work processes.\nWe fight for quality traffic for advertisers and help webmasters get the most favorable offers.\nWe do not follow the market. We set new standards for it.\n",
+    "achievement" : [
+      {
+      "title" : "10",
+      "text" : "paid to partners over the past year"
+      },
+      {
+        "title" : "90",
+        "text" : "leads per month"
+      },
+      {
+        "title" : "60",
+        "text" : "GEOS"
+      },
+      {
+        "title" : "unlim cap",
+        "text" : "for quality traffic"
+      }
+    ],
+    "aboutBottomTittle" : "They Will Test It Tomorrow - We Convert It Today",
+    "aboutBottomText" : "Thanks to our own media buying, we are always following the trends and know everything that converts today",
+    "contactsTopTitle" : "Contacts",
+    "contactFormTitle" : "Let's Start Together!",
+    "contactFormLabelList" : ["Name","Telegram nickname","Traffic source"],
+    "contactFormSubmit" : ["send"],
+    "contactFormThankYou" : ["Thank you for the registration! Wait for a response from our manager"],
+    "eventsPageTitle" : "events",
+    "reviewsList" : [
+      {
+        "name" : "HugeOffers",
+        "text" : "Belmarcpa's dedicated team. They are professional, responsive, and bring great value to our partnership. Their expertise and positive attitude have made working with them a pleasure and have contributed to our success. I highly recommend them to anyone seeking a skilled and committed team to work with."
+      },
+      {
+        "name" : "JBO",
+        "text" : "We have been working with BelmarMarketing for quite a long time\nDuring this time, they have shown themselves to be responsible and reliable partners with high-quality traffic who are always in touch.\nPaired with friendly communication, the perfect tandem comes out\uD83D\uDE07\nI recommend them for work! \n"
+      },
+      {
+        "name" : "Palma",
+        "text" : "Belmar is one of the most responsible teams. We used to work on several GEOs, and the quality of the traffic is on the level. Quick responses and alternatives on any request. Polite and friendly managers, good attitude, easy and productive cooperation.\n"
+      },
+      {
+        "name" : "996",
+        "text" : "We are satisfied with the cooperation with Belmar. They are great guys, provide high rates and excellent convert. It's all about them. We give traffic mainly to the SPA, as they have some of the best brands on the market, and not a single deposit has been sheared for the entire time of work, I really like working with their manager Alice, a true professional and just a good person!!"
+      },
+      {
+        "name" : "Adscobar",
+        "text" : "BelmarMarketing has been a reliable partner for Adscobar. Their 24/7 support is exceptional, offering prompt assistance whenever needed. They provide valuable and detailed feedback, greatly improving any marketing strategies. Despite not having the highest payouts (which we know is not the most important thing), CR for all GEOs is really impressive. We highly recommend BelmarMarketing as a results-driven network."
+      }
+    ]
+  }
+

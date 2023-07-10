@@ -1,9 +1,11 @@
 import './pageAboutPreFooter.css';
-import dvd_logo from '../../images/DVD_logo.png';
 import LanguageContext from "../../LanguageContext/LanguageContext";
 import {useContext} from "react";
 export default function PageAboutPreFooter(){
     const { translations } = useContext(LanguageContext);
+
+    const dvdImg = {img : require('../../images/DVD_logo.png')}
+
     return(
         <div className='page_about_prefooter'>
             <div className='page_about_prefooter_box'>
@@ -13,7 +15,7 @@ export default function PageAboutPreFooter(){
                 </p>
             </div>
             <div className='dvd_animation_box'>
-                <img src={dvd_logo} alt="DVD"/>
+                <img src={dvdImg.img} alt="DVD"/>
             </div>
 
         </div>

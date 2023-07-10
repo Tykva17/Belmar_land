@@ -27,6 +27,8 @@
     }
     .company_contact_box{
         padding-bottom: 0;
+        border-right: none;
+
     }
     .company_contact_box-title{
         margin: 0;
