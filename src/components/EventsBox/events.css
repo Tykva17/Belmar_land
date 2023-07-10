@@ -47,8 +47,11 @@
 }
 .event_item img{
     width: 100%;
+    min-height: 150px;
 }
-
+.event_info{
+    min-height: 200px;
+}
 .event_main_line{
     height: 90%;
     min-height: 350px;

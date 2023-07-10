@@ -1,12 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import arrow from '../../images/material-symbols_line-end-arrow-outline.png';
-import lock from '../../images/noun-lock-1175394 1.png';
-import eyes from '../../images/noun-eyes-363350 1.png';
-import analityc from '../../images/Ico_Graphic.png';
-import cup from '../../images/Ico_Cup.png';
-import brain from '../../images/Ico_Head_Settings.png';
 import {useEffect, useState} from "react";
 import AdvantegesItem from "./AdvantegesItem";
 import './advanteges.css';
@@ -15,6 +9,15 @@ import {useContext} from "react";
 
 export default function Advanteges(){
     const { translations } = useContext(LanguageContext);
+
+    const imgAdvImages = {
+        arrow  : require('../../images/material-symbols_line-end-arrow-outline.png'),
+        lock  : require('../../images/noun-lock-1175394 1.png'),
+        eyes  : require('../../images/noun-eyes-363350 1.png'),
+        analityc  : require('../../images/Ico_Graphic.png'),
+        cup  : require('../../images/Ico_Cup.png').default,
+        brain : require('../../images/Ico_Head_Settings.png').default
+    }
 
     const [isMobile , setIsMobile] = useState(false)
     const [slidesShowScroll , setSlidesShowScroll]  =  useState(2);
@@ -33,10 +36,9 @@ export default function Advanteges(){
 
     }, [isMobile]);
 
-
     const CustomNextArrow = (props) => (
         <button className="advanteges_link" onClick={props.onClick}>
-            <img src={arrow} alt="->"/>
+            <img src={imgAdvImages.arrow} alt="->"/>
         </button>
     );
     const CustomPrevArrow = (props) => (
@@ -54,21 +56,18 @@ export default function Advanteges(){
         nextArrow: <CustomNextArrow />
     };
 
-
     return (
         <div className='advanteges'>
             <div className="advanteges_side-boxtitle">
                 <h1 className="advanteges_side-title">{translations.mainPageAdvantegesTitle}</h1>
             </div>
             <Slider className='advanteges_main' {...settings}>
-                <AdvantegesItem src={lock} text={translations.mainPageAdvantegesList[0]}/>
-                <AdvantegesItem src={eyes} text={translations.mainPageAdvantegesList[1]}/>
-                <AdvantegesItem src={cup} text={translations.mainPageAdvantegesList[2]}/>
-                <AdvantegesItem src={analityc} text={translations.mainPageAdvantegesList[3]}/>
-                <AdvantegesItem src={brain} text={translations.mainPageAdvantegesList[4]}/>
+                <AdvantegesItem src={imgAdvImages.lock} text={translations.mainPageAdvantegesList[0]}/>
+                <AdvantegesItem src={imgAdvImages.eyes} text={translations.mainPageAdvantegesList[1]}/>
+                <AdvantegesItem src={imgAdvImages.cup} text={translations.mainPageAdvantegesList[2]}/>
+                <AdvantegesItem src={imgAdvImages.analityc} text={translations.mainPageAdvantegesList[3]}/>
+                <AdvantegesItem src={imgAdvImages.brain} text={translations.mainPageAdvantegesList[4]}/>
             </Slider>
-
-
         </div>
     )
 }
