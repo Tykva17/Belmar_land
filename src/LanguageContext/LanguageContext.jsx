@@ -11,7 +11,6 @@ export const LanguageProvider = ({ children }) => {
     const [translations, setTranslations] = useState(uaJsonAff);
 
     const showText = (lang, affadv) => {
-        console.log(lang, affadv)
         if(lang == 'ua' && affadv == 'aff'){
             setTranslations(uaJsonAff);
         }else if(lang == 'ua' && affadv == 'adv'){
@@ -21,46 +20,38 @@ export const LanguageProvider = ({ children }) => {
         }else if(lang == 'en' && affadv == 'adv'){
             setTranslations(enJsonAdv);
         }
+        localStorage.setItem("affOrAdvNow", affadv);
+        localStorage.setItem("langNow", lang);
+        setToggleLang(lang);
+        setAffAdv(affadv);
     }
 
     const changeLanguage = (newLanguage) => {
-        setToggleLang(newLanguage);
         showText(newLanguage,affAdv);
     };
     const changeAffAdv = (affOrAdv) => {
-        console.log(affOrAdv)
-        setAffAdv(affOrAdv);
         showText(toggleLang,affOrAdv);
     }
 
     useEffect(() => {
         const langNow = localStorage.getItem("langNow");
         if(langNow !== undefined || langNow !== null){
+            setToggleLang(langNow);
+        }else{
             localStorage.setItem("langNow", "ua");
             setToggleLang('ua');
-            console.log(langNow , 'langNow if 1');
-        }else{
-            setToggleLang(langNow);
-            console.log(langNow , 'langNow if 2');
-
         }
-        console.log(langNow , 'langNow if after');
-
 
         const affOrAdvNow = localStorage.getItem("affOrAdvNow");
         if(affOrAdvNow !== undefined || affOrAdvNow !== null){
+            setAffAdv(affOrAdvNow);
+        }else{
             localStorage.setItem("affOrAdvNow", "aff");
             setAffAdv('aff');
-        }else{
-            setAffAdv(affOrAdvNow);
         }
 
-        console.log("toggleLang : " , toggleLang);
-        console.log("affAdv : " , affAdv);
-    },[setToggleLang, setAffAdv]);
-
-
-
+        showText(langNow, affOrAdvNow)
+    },[translations]);
 
     return (
         <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv }}>

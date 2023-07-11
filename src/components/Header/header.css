@@ -9,6 +9,7 @@
 }
 .logo{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-right: 1px solid #D9D9D9;
@@ -18,6 +19,13 @@
     color: #f1f1f1;
     font-size: 2rem;
     cursor: pointer;
+    margin: 0;
+}
+.logo span{
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #a1147a;
 }
 
 .navbar_links{
@@ -60,10 +68,10 @@
 
 .lang h1{
     color: #f1f1f1;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 400;
-    margin-left: 4rem;
+    margin-left: 1rem;
     cursor: pointer;
 }
 .navbar_link_mob{
@@ -127,15 +135,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding-top: 30%;
     }
 
     .mob_menu_links_container-item{
         border: none;
         background: none;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #f1f1f1;
         font-weight: bold;
         text-transform: uppercase;
+        margin: 1rem;
 
     }
     .mob_menu_links_container-item.active{

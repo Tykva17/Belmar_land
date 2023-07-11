@@ -14,9 +14,10 @@
 
 @media all and (max-width: 480px){
     .reviews{
-        padding: 1.5rem 1rem;
+        padding: 2rem 0;
     }
     .reviews_box-title{
         font-size: 2.2rem;
+        margin-left: 1.3rem;
     }
 }

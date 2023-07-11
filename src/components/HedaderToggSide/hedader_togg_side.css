@@ -79,7 +79,7 @@ input.hedader_togg_side_input:checked + span.hedader_togg_side_span:before {
         margin: 0 0 0 10px;
     }
     .hedader_togg_side_tittle{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin: 0 ;
         width: auto ;
     }

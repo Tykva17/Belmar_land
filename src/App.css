@@ -6,3 +6,9 @@ body{
     background-color: #1F1F1F;
     font-family: 'Unbounded', cursive;
 }
+
+@media all and (max-width: 480px){
+    body{
+        overflow-x: hidden;
+    }
+}

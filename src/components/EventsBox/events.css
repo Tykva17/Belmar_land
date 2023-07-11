@@ -48,6 +48,7 @@
 .event_item img{
     width: 100%;
     min-height: 150px;
+    max-height: 250px;
 }
 .event_info{
     min-height: 200px;
@@ -65,7 +66,7 @@
     padding: 0;
     margin: 1.7rem 10px 0 0;
     color: #f1f1f1;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 
@@ -78,11 +79,10 @@
 
 @media all and (max-width: 480px){
     .events{
-        padding: 2rem 1rem;
-        width: calc(100vw - 2rem);
+        padding: 1rem 0;
     }
     .events_header_title{
-        margin: 0;
+        margin:1rem;
         font-size: 2.2rem;
     }
     .overflow-scrolling-events.events_list{
@@ -90,12 +90,33 @@
     }
     .event_item{
         min-width: calc(67vw - 2rem);
-        padding: 1rem;
+        padding: 0 1rem;
         border-right: none;
     }
     .event_item img{
         max-width: 280px;
         width: 100%;
+        min-height: 90px;
+        max-height: 170px;
+    }
+    .event_name{
+        font-size: 1.4rem;
+        margin: 1rem 0;
+    }
+
+
+    .event_link{
+        max-width: 50px;
+        background-color: #1F1F1F;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
     }
 
 }

@@ -15,7 +15,7 @@ export default function MainAboutTop ({isMobileTitle}){
                     {translations.mainPagePartnersMainTitle[0]} <br/>
                     <span className='pink_title'>{translations.mainPagePartnersMainTitle[1]}</span> <br/>
                     {translations.mainPagePartnersMainTitle[2]}
-                </h1>)
+                </h1>
 
             </div>
         </div>

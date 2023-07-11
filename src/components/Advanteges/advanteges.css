@@ -17,6 +17,7 @@
     align-items: center;
     width: 100%;
     padding: 4rem 0;
+    max-width: 215px;
 }
 
 .advanteges_side-title{
@@ -24,6 +25,9 @@
     font-size: 2.4rem;
     color: #f1f1f1;
     text-transform: uppercase;
+    margin-left: -30px;
+
+
 }
 
 .advanteges_main{
@@ -104,6 +108,8 @@
     .advanteges_side-title{
         transform: rotate(0deg);
         font-size: 2.2rem;
+        max-width: 100%;
+        margin-left: 0;
     }
     .overflow-scrolling-2.advanteges_main{
         overflow: auto;

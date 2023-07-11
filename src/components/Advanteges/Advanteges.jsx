@@ -15,8 +15,8 @@ export default function Advanteges(){
         lock  : require('../../images/noun-lock-1175394 1.png'),
         eyes  : require('../../images/noun-eyes-363350 1.png'),
         analityc  : require('../../images/Ico_Graphic.png'),
-        cup  : require('../../images/Ico_Cup.png').default,
-        brain : require('../../images/Ico_Head_Settings.png').default
+        cup  : require('../../images/Ico_Cup.png'),
+        brain : require('../../images/Ico_Head_Settings.png')
     }
 
     const [isMobile , setIsMobile] = useState(false)

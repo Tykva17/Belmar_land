@@ -39,7 +39,7 @@
 }
 .hedader_top_info_title{
     width: 100%;
-    font-size: 5.5rem;
+    font-size: 4.3rem;
     color: #f1f1f1;
     line-height: 1.2;
     text-transform: uppercase;
@@ -51,7 +51,12 @@
 }
 .hedader_top_info_title.right{
     grid-area: right;
-    text-align: right;
+    text-align: left;
+}
+.hedader_top_info_title.center{
+    grid-area: center;
+    text-align: left;
+    color: #a1147a;
 }
 
 @media all and (max-width: 480px){
@@ -70,6 +75,7 @@
         display: grid;
         grid-template-areas:
         'left'
+        'center'
         'right';
         margin: auto;
         width: 100%;
@@ -81,5 +87,7 @@
     .hedader_top_cirkles img{
         width: 110px;
     }
-
+    .hedader_top_info_title.right{
+        font-size: 1.2rem;
+    }
 }

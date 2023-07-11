@@ -27,6 +27,7 @@ export default function HedaderTop(){
                 </div>
                 <div className='hedader_top_info_titles'>
                     <h1 className='hedader_top_info_title left'>{translations.mainPageTitle1}</h1>
+                    <h1 className='hedader_top_info_title center'>{translations.mainPageTitle3}</h1>
                     <h1 className='hedader_top_info_title right'>{translations.mainPageTitle2}</h1>
                 </div>
             </div>

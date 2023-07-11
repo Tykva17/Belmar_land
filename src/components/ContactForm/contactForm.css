@@ -59,6 +59,45 @@ input.form_input:-webkit-autofill{
     outline: none;
 }
 
+.popup_send{
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+}
+.popup_send_box{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    pointer-events: none;
+}
+.popup_send_box_title{
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+.popup_send_box_text{
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin: 0.5rem;
+    text-align: center;
+
+}
+
 @media all and (max-width: 480px){
     .form_submit{
         padding: 2rem;
@@ -67,5 +106,8 @@ input.form_input:-webkit-autofill{
         font-size: 1.8rem;
         text-transform: capitalize;
         margin-top: 20px;
+    }
+    .popup_send_box{
+        padding: 1rem;
     }
 }

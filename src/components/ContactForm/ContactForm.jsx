@@ -8,7 +8,7 @@ import {useContext} from "react";
 
 const validationSchema = Yup.object().shape({
     name: Yup.string().required('Поле є обовязковим'),
-    email: Yup.string().required('Поле "Електронна пошта" є обовязковим'),
+    telegramm: Yup.string().required('Поле "Електронна пошта" є обовязковим'),
     comment: Yup.string().required('Поле "Коментар" є обовязковим'),
 });
 
@@ -17,10 +17,43 @@ const ContactForm = () => {
 
     const { translations } = useContext(LanguageContext);
 
+
+
+    function submitFormToGoogleSheet(name, telegramm, comment) {
+
+        let paramAffOrAdv = localStorage.getItem('affOrAdvNow');
+        let paramLang = localStorage.getItem('langNow');
+
+        let formData = {
+            'name': name,
+            'telegram': telegramm,
+            'comment': comment,
+            '_token' : '873429:recorca',
+            'partner' : paramAffOrAdv,
+            'lang' : paramLang
+        };
+
+        let url = `https://${window.location.hostname}/send.php`;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log('Форма успішно відправлена');
+            }
+        };
+        console.log('JSON formdate : ' , JSON.stringify(formData))
+        xhr.send(JSON.stringify(formData));
+
+    }
+
+
+
     const formik = useFormik({
         initialValues: {
             name: '',
-            email: '',
+            telegramm: '',
             comment: '',
         },
         handleChange: event => {
@@ -29,7 +62,11 @@ const ContactForm = () => {
         },
         validationSchema: validationSchema,
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            submitFormToGoogleSheet(formik.values.name, formik.values.telegramm,formik.values.comment);
+            setPopupClose(true);
+            formik.setFieldValue('name','');
+            formik.setFieldValue('telegramm','');
+            formik.setFieldValue('comment','');
         },
     });
     const [focusedName, setFocusedName] = useState(false);
@@ -54,8 +91,21 @@ const ContactForm = () => {
         setFocusedComment(false);
     };
 
+    const [popupClose, setPopupClose] = useState(false);
+    const handlePopupClose = () => {
+        setPopupClose(false);
+    }
+
     return (
         <form className='form_submit' onSubmit={formik.handleSubmit}>
+            { popupClose ?
+                <div onClick={handlePopupClose} className='popup_send'>
+                    <div className="popup_send_box">
+                        <h3 className="popup_send_box_title">{translations.thanksTitle}!</h3>
+                        <p className="popup_send_box_text">{translations.thanksText}</p>
+                    </div>
+                </div> : false
+            }
             <div className='form_box'>
                 <label
                     className={`form_label ${focusedName || formik.values.name ? 'active' : ''}`}
@@ -73,13 +123,13 @@ const ContactForm = () => {
 
             <div className='form_box'>
                 <label
-                    className={`form_label ${focusedEmail || formik.values.email ? 'active' : ''}`}
+                    className={`form_label ${focusedEmail || formik.values.telegramm ? 'active' : ''}`}
                 >{translations.contactFormLabelList[1]}</label>
                 <input
-                    className={formik.errors.email ? 'error form_input' : 'form_input'}
-                    id='email'
+                    className={formik.errors.telegramm ? 'error form_input' : 'form_input'}
+                    id='telegramm'
                     type='text'
-                    value={formik.values.email}
+                    value={formik.values.telegramm}
                     onChange={formik.handleChange}
                     onFocus={handleFocusEmail}
                     onBlur={handleBlurEmail}

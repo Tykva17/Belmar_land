@@ -2,7 +2,8 @@
   {
     "navBarItems" : ["about us", "events", "contacts"],
     "toggleLang" : "ua",
-    "mainPageTitle1" : "BELMARKETING",
+    "mainPageTitle1" : "BELMAR",
+    "mainPageTitle3" : "MARKETING",
     "mainPageTitle2" : "FOR PARTNERS",
     "mainPageSubtitle" : "There is no such thing as low-quality traffic — there are wrong partners. You will forget about all possible traffic problems by working with us because we know how to simplify complex workflows. Therefore, our team of professionals will ensure that you can enjoy the process of making a profit without any unnecessary worries.\nCreated by webmasters for webmasters.\n",
     "mainPagePartnersTitle" : "Our sources",
@@ -58,13 +59,47 @@
       },
       {
         "name" : "996",
-        "text" : "We are satisfied with the cooperation with Belmar. They are great guys, provide high rates and excellent convert. It's all about them. We give traffic mainly to the SPA, as they have some of the best brands on the market, and not a single deposit has been sheared for the entire time of work, I really like working with their manager Alice, a true professional and just a good person!!"
+        "text" : "We are satisfied with the cooperation with Belmar. They are great guys, provide high rates and excellent convert. It's all about them. We give traffic mainly to the CPA, as they have some of the best brands on the market, and not a single deposit has been sheared for the entire time of work, I really like working with their manager Alice, a true professional and just a good person!!"
       },
       {
         "name" : "Adscobar",
         "text" : "BelmarMarketing has been a reliable partner for Adscobar. Their 24/7 support is exceptional, offering prompt assistance whenever needed. They provide valuable and detailed feedback, greatly improving any marketing strategies. Despite not having the highest payouts (which we know is not the most important thing), CR for all GEOs is really impressive. We highly recommend BelmarMarketing as a results-driven network."
       }
 
-    ]
+    ],
+    "eventsList" : [
+      {
+        "title" : "WE'RE GOING TO AFFILIATE WORLD AGAIN!",
+        "location" : "Barcelona, Spain",
+        "date" : "12-13 July, 2023"
+      },
+      {
+        "title" : "WE'RE GLAD TO SEE YOU AT SEMPRO!",
+        "location" : "Kyiv, Ukraine",
+        "date" : "16 June, 2023"
+      },
+      {
+        "title" : "LOOK FOR AN INCREDIBLE ENCOUNTER WITH YOU AT THE FOREX EXPRO",
+        "location" : "Dubai, UAE",
+        "date" : "17-18 May, 2023"
+      },
+      {
+        "title" : "READY FOR NEW AND EXCITING INTRODUCTIONS ON AFFHUB!",
+        "location" : "Lviv, Ukraine",
+        "date" : "7 April, 2023"
+      },
+      {
+        "title" : "GLAD TO MEET YOU AT SEMPRO!",
+        "location" : "Kyiv, Ukraine",
+        "date" : "3 February, 2023"
+      },
+      {
+        "title" : "LET'S MEET AT AFFILIATE WORLD IN ASIA!",
+        "location" : "Bangkok, Thailand",
+        "date" : "7-8 December, 2023"
+      }
+    ],
+    "thanksTitle" : "sent",
+    "thanksText" : "we will contact you soon"
   }
 

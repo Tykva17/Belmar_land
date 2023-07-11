@@ -14,10 +14,13 @@ export default function Header(){
     const [showMenu, setShowMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('home');
 
+    const bgImage = { img : require('../MainAboutTop/mainAboutTopBg.png') }
+
     const navigate = useNavigate();
     const handleAlbumClick = (page) => {
         navigate(`/${page}`);
         setActiveItem(page);
+        setShowMenu(false);
     };
 
     const toggleLanguage = () => {
@@ -34,6 +37,7 @@ export default function Header(){
             <div className='header'>
                 <div className='logo'>
                     <h1 onClick={() => handleAlbumClick('')}>Belmar</h1>
+                    <span onClick={() => handleAlbumClick('')}>marketing</span>
                 </div>
                 <div className='navbar_links'>
                     <div className="navbar_links_container">
@@ -50,7 +54,7 @@ export default function Header(){
                 </div>
                 {
                     showMenu ? (
-                        <div className="mob_menu">
+                        <div className="mob_menu" style={{backgroundImage: `url("${bgImage.img}")`}}>
                             <div className='mob_menu-close'>
                                 <img onClick={menuToggler} src={mobMenuClose} alt=""/>
                             </div>
