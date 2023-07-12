@@ -17,6 +17,9 @@
     grid-area: Item_img;
     padding: 0 2rem;
 }
+.review_item_img img{
+    max-width: 120px;
+}
 
 .review_item_name{
     grid-area: Item_name;

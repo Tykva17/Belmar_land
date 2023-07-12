@@ -42,7 +42,7 @@
     "aboutBottomText" : "Thanks to our own media buying, we are always following the trends and know everything that converts today",
     "contactsTopTitle" : "Contacts",
     "contactFormTitle" : "Let's Start Together!",
-    "contactFormLabelList" : ["Name","Telegram nickname","Traffic source"],
+    "contactFormLabelList" : ["Name","Telegram nickname","Geos you work with"],
     "contactFormSubmit" : ["send"],
     "contactFormThankYou" : ["Thank you for the registration! Wait for a response from our manager"],
     "eventsPageTitle" : "events",

@@ -5,10 +5,11 @@ import uaJsonAdv from '../text-data/uaAdv.json';
 import enJsonAdv from '../text-data/enAdv.json';
 const LanguageContext = createContext();
 
+
 export const LanguageProvider = ({ children }) => {
-    const [toggleLang, setToggleLang] = useState(null); // ua ==> true , en ==> false
-    const [affAdv, setAffAdv] = useState(null); // en ==> true , ua ==> false
-    const [translations, setTranslations] = useState(uaJsonAff);
+    const [toggleLang, setToggleLang] = useState('en');
+    const [affAdv, setAffAdv] = useState('adv');
+    const [translations, setTranslations] = useState(enJsonAdv);
 
     const showText = (lang, affadv) => {
         if(lang == 'ua' && affadv == 'aff'){
@@ -19,14 +20,24 @@ export const LanguageProvider = ({ children }) => {
             setTranslations(enJsonAff);
         }else if(lang == 'en' && affadv == 'adv'){
             setTranslations(enJsonAdv);
+        }else if(affadv == 'adv'){
+            setTranslations(enJsonAdv);
+        }else if(affadv == 'aff'){
+            setTranslations(enJsonAff);
+        }else {
+            setTranslations(enJsonAdv);
         }
-        localStorage.setItem("affOrAdvNow", affadv);
-        localStorage.setItem("langNow", lang);
-        setToggleLang(lang);
+
+        console.log(lang, affadv);
         setAffAdv(affadv);
+        localStorage.setItem("affOrAdvNow", affadv);
+        setToggleLang(lang);
+        localStorage.setItem("langNow", lang);
     }
 
     const changeLanguage = (newLanguage) => {
+
+        console.log(newLanguage)
         showText(newLanguage,affAdv);
     };
     const changeAffAdv = (affOrAdv) => {
@@ -34,24 +45,23 @@ export const LanguageProvider = ({ children }) => {
     }
 
     useEffect(() => {
+        let lang , affadv = '';
         const langNow = localStorage.getItem("langNow");
-        if(langNow !== undefined || langNow !== null){
-            setToggleLang(langNow);
-        }else{
-            localStorage.setItem("langNow", "ua");
-            setToggleLang('ua');
+        if(langNow == 'null'){
+            lang = 'en';
+        }else {
+            lang = langNow;
         }
 
         const affOrAdvNow = localStorage.getItem("affOrAdvNow");
-        if(affOrAdvNow !== undefined || affOrAdvNow !== null){
-            setAffAdv(affOrAdvNow);
+        if(affOrAdvNow == 'null'){
+            affadv = 'adv';
         }else{
-            localStorage.setItem("affOrAdvNow", "aff");
-            setAffAdv('aff');
+            affadv = affOrAdvNow;
         }
 
-        showText(langNow, affOrAdvNow)
-    },[translations]);
+        showText(lang , affadv);
+    },[]);
 
     return (
         <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv }}>

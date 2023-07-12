@@ -9,7 +9,7 @@ import LanguageContext from "../../LanguageContext/LanguageContext";
 
 export default function Header(){
     const { translations, changeLanguage } = useContext(LanguageContext);
-    const [langOn, setLangOn] = useState(true)
+    const [langOn, setLangOn] = useState(false)
 
     const [showMenu, setShowMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('home');
