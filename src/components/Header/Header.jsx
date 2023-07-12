@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 import './header.css';
 import menuBtn from '../../images/mdi-light_menu.png';
 import mobMenuClose from '../../images/mob-close.svg';
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import classnames from "classnames";
 import LanguageContext from "../../LanguageContext/LanguageContext";
 

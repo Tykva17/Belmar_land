@@ -41,25 +41,19 @@ export const LanguageProvider = ({ children }) => {
         showText(newLanguage,affAdv);
     };
     const changeAffAdv = (affOrAdv) => {
+        console.log(affOrAdv)
         showText(toggleLang,affOrAdv);
     }
 
     useEffect(() => {
         let lang , affadv = '';
         const langNow = localStorage.getItem("langNow");
-        if(langNow == 'null'){
-            lang = 'en';
-        }else {
-            lang = langNow;
-        }
+        (langNow == 'en' || langNow == 'ua') ? lang = langNow : lang = 'en';
 
         const affOrAdvNow = localStorage.getItem("affOrAdvNow");
-        if(affOrAdvNow == 'null'){
-            affadv = 'adv';
-        }else{
-            affadv = affOrAdvNow;
-        }
+        (affOrAdvNow == 'aff' || affOrAdvNow == 'adv') ? affadv = affOrAdvNow : affadv = 'adv';
 
+        console.log('use effect' , lang , affadv)
         showText(lang , affadv);
     },[]);
 
