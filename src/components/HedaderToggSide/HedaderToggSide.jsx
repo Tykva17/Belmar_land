@@ -1,4 +1,4 @@
-import { useState} from "react";
+import {useEffect, useState} from "react";
 import './hedader_togg_side.css';
 import LanguageContext from "../../LanguageContext/LanguageContext";
 import {useContext} from "react";
@@ -8,10 +8,28 @@ export default function HedaderToggSide(){
     const { changeAffAdv } = useContext(LanguageContext);
     const [isToggled, toggle] = useState(true); // aff ==> false , adv ==> true
 
+    useEffect(() => {
+
+        setTimeout(()=>{
+            const affOrAdvNow = localStorage.getItem("affOrAdvNow");
+            (affOrAdvNow == 'aff') ? toggle(false) : toggle(true);
+            console.log('isToggled hedader',isToggled, affOrAdvNow)
+        },1500)
+
+    },[])
 
     const callback = () => {
         toggle(!isToggled);
-        isToggled ? changeAffAdv('adv') : changeAffAdv('aff');
+        sendToContext(!isToggled);
+    }
+
+    const handleChange = () => {
+        console.log('handleChange',isToggled)
+    }
+
+    const sendToContext = (val) => {
+        val ? changeAffAdv('adv', true) : changeAffAdv('aff', false);
+        console.log('toggle', isToggled, val)
     }
 
     return (
@@ -22,7 +40,7 @@ export default function HedaderToggSide(){
                 </div>
                 <div>
                     <label className='hedader_togg_side_label'>
-                        <input className='hedader_togg_side_input' type="checkbox" defaultChecked={isToggled} onClick={callback} />
+                        <input className='hedader_togg_side_input' type="checkbox" onChange={handleChange} checked={isToggled} onClick={callback} />
                         <span className='hedader_togg_side_span' />
 
                     </label>

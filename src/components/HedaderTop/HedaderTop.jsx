@@ -2,6 +2,7 @@
 import './hedader_top.css';
 import LanguageContext from "../../LanguageContext/LanguageContext";
 import {useContext} from "react";
+import Cirkle from "../Map/Cirkle";
 
 
 export default function HedaderTop(){
@@ -17,7 +18,8 @@ export default function HedaderTop(){
     return(
         <div className='hedader_top'>
             <div className='hedader_top_cirkles'>
-                <img src={topArrImg.cirkles} alt=""/>
+                <Cirkle/>
+                {/*<img src={topArrImg.cirkles} alt=""/>*/}
             </div>
             <div className='hedader_top_info'>
                 <div className='hedader_top_info_imgs'>

@@ -28,7 +28,7 @@ export default function HedaderBottom(){
                 </div>
             </div>
             <div className='hedader_bottom_shin'>
-                <img src={imgArr.imgGradient} alt="#"/>
+                {/*<img src={imgArr.imgGradient} alt="#"/>*/}
             </div>
             <div className='hedader_bottom_scode'>
                 <img src={imgArr.imgScode} alt="#"/>

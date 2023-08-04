@@ -1,0 +1,11 @@
+.map_box{
+    max-width: 1300px;
+    width: 100%;
+    padding: 3rem;
+}
+
+.map_box path{
+    fill: #1F1F1F;
+    stroke: #7C7C7C;
+    stroke-width: 1px;
+}

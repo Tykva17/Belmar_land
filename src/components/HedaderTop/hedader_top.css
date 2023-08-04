@@ -4,7 +4,9 @@
     grid-template-rows: calc(50vh - 40px);
     align-content: center;
     width: 100%;
-    background-color: #1F1F1F;
+    /*background-color: #1F1F1F;*/
+    background: url("../../images/space.jpg");
+    background-size: contain;
 }
 .hedader_top_cirkles{
     display: flex;

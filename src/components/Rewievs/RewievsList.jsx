@@ -15,6 +15,8 @@ export default function ReviewList(){
         avatar2 : require('../../images/palma.png'),
         avatar3 : require('../../images/Adscobar.PNG'),
         avatar4 : require('../../images/hugeOff.png'),
+        avatar5 : require('../../images/996.png'),
+        avatar6 : require('../../images/jbo.png'),
     }
 
     const CustomPrevArrow = (props) => (
@@ -48,9 +50,9 @@ export default function ReviewList(){
                <Slider className='reviews_slider' {...settings}>
 
                     <ReviewItem img={imgReviewImages.avatar4} key={1} title={translations.reviewsList[0].name} text={translations.reviewsList[0].text}/>
-                    <ReviewItem img={imgReviewImages.avatar1} key={2} title={translations.reviewsList[1].name} text={translations.reviewsList[1].text}/>
+                    <ReviewItem img={imgReviewImages.avatar6} key={2} title={translations.reviewsList[1].name} text={translations.reviewsList[1].text}/>
                     <ReviewItem img={imgReviewImages.avatar2} key={3} title={translations.reviewsList[2].name} text={translations.reviewsList[2].text}/>
-                    <ReviewItem img={imgReviewImages.avatar1} key={4} title={translations.reviewsList[3].name} text={translations.reviewsList[3].text}/>
+                    <ReviewItem img={imgReviewImages.avatar5} key={4} title={translations.reviewsList[3].name} text={translations.reviewsList[3].text}/>
                     <ReviewItem img={imgReviewImages.avatar3} key={5} title={translations.reviewsList[4].name} text={translations.reviewsList[4].text}/>
 
                </Slider>

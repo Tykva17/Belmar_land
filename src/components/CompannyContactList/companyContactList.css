@@ -30,6 +30,10 @@
     text-transform: uppercase;
     text-decoration: underline;
     margin: 1rem 0;
+    /*overflow-wrap: break-word;*/
+    width: 100%;
+    /*max-width: 320px;*/
+    min-height: 50px;
 }
 
 .company_contacts_list-href{

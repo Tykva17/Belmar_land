@@ -21,7 +21,7 @@ export default function CompanyContactList(){
                 <h3 className='company_contacts_list-title'>
                     Email
                 </h3>
-                <a target="_blank" href="mailto:belmarmarketingmanager@gmail.com" className='company_contacts_list-example'>belmarmarketing</a>
+                <a target="_blank" href="mailto:belmarmarketingmanager@gmail.com" className='company_contacts_list-example'>belmarmarketing<br/>@gmail.com</a>
                 <a target="_blank" href="mailto:belmarmarketingmanager@gmail.com" className='company_contacts_list-href'>explore</a>
             </div>
         </div>

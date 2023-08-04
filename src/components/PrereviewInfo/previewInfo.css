@@ -1,0 +1,38 @@
+.pre_preview_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: url("../../images/space.jpg");
+    background-size: cover;
+    border-bottom: 1px solid #f1f1f1;
+}
+.pre_preview_info_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+}
+.pre_preview_info_title{
+    margin: 0;
+    color: #f1f1f1;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.pre_preview_info_text{
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    text-align: center;
+}
+@media all and (max-width: 480px){
+    .pre_preview_info{
+        padding: 2rem 1rem;
+    }
+    .pre_preview_info_title{
+        font-size: 1.7rem;
+    }
+    .pre_preview_info_text{
+        font-size: 1.4rem;
+    }
+}

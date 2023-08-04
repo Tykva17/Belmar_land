@@ -10,6 +10,7 @@ export const LanguageProvider = ({ children }) => {
     const [toggleLang, setToggleLang] = useState('en');
     const [affAdv, setAffAdv] = useState('adv');
     const [translations, setTranslations] = useState(enJsonAdv);
+    const [isToggleUser, setIsToggleUser] = useState(true);
 
     const showText = (lang, affadv) => {
         if(lang == 'ua' && affadv == 'aff'){
@@ -28,21 +29,21 @@ export const LanguageProvider = ({ children }) => {
             setTranslations(enJsonAdv);
         }
 
-        console.log(lang, affadv);
+        console.log('show text' , lang, affadv);
         setAffAdv(affadv);
         localStorage.setItem("affOrAdvNow", affadv);
         setToggleLang(lang);
         localStorage.setItem("langNow", lang);
+
     }
 
     const changeLanguage = (newLanguage) => {
-
-        console.log(newLanguage)
         showText(newLanguage,affAdv);
     };
-    const changeAffAdv = (affOrAdv) => {
-        console.log(affOrAdv)
+    const changeAffAdv = (affOrAdv, bool) => {
+        console.log('context',affOrAdv)
         showText(toggleLang,affOrAdv);
+        setIsToggleUser(bool);
     }
 
     useEffect(() => {
@@ -52,13 +53,12 @@ export const LanguageProvider = ({ children }) => {
 
         const affOrAdvNow = localStorage.getItem("affOrAdvNow");
         (affOrAdvNow == 'aff' || affOrAdvNow == 'adv') ? affadv = affOrAdvNow : affadv = 'adv';
-
-        console.log('use effect' , lang , affadv)
+        // console.log('use effect' , lang , affadv)
         showText(lang , affadv);
     },[]);
 
     return (
-        <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv }}>
+        <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv, isToggleUser }}>
             {children}
         </LanguageContext.Provider>
     );

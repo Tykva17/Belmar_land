@@ -8,40 +8,47 @@ export default function EventsBox(){
     const { translations } = useContext(LanguageContext);
 
     const arrEvent = [
+
         {
             "title" : translations.eventsList[0].title,
             "location" : translations.eventsList[0].location,
             "date" : translations.eventsList[0].date,
-            "img" : require("../../images/IMG_8844.PNG")
+            "img" : require("../../images/IMG_8899.PNG")
         },
         {
             "title" : translations.eventsList[1].title,
             "location" : translations.eventsList[1].location,
             "date" : translations.eventsList[1].date,
-            "img" : require("../../images/IMG_8837.jpeg")
+            "img" : require("../../images/IMG_8844.PNG")
         },
         {
             "title" : translations.eventsList[2].title,
             "location" : translations.eventsList[2].location,
             "date" : translations.eventsList[2].date,
-            "img" : require("../../images/IMG_8832.jpeg")
+            "img" : require("../../images/IMG_8837.jpeg")
         },
         {
             "title" : translations.eventsList[3].title,
             "location" : translations.eventsList[3].location,
             "date" : translations.eventsList[3].date,
-            "img" : require("../../images/IMG_8841.PNG")
+            "img" : require("../../images/IMG_8832.jpeg")
         },
         {
             "title" : translations.eventsList[4].title,
             "location" : translations.eventsList[4].location,
             "date" : translations.eventsList[4].date,
-            "img" : require("../../images/IMG_8838.jpeg")
+            "img" : require("../../images/IMG_8841.PNG")
         },
         {
             "title" : translations.eventsList[5].title,
             "location" : translations.eventsList[5].location,
             "date" : translations.eventsList[5].date,
+            "img" : require("../../images/IMG_8838.jpeg")
+        },
+        {
+            "title" : translations.eventsList[6].title,
+            "location" : translations.eventsList[6].location,
+            "date" : translations.eventsList[6].date,
             "img" : require("../../images/IMG_8833.PNG")
         }
     ];

@@ -5,7 +5,8 @@
     padding: 3rem;
     border-bottom: 1px solid #f1f1f1;
     border-top: 1px solid #f1f1f1;
-
+    background: url("../../images/space.jpg");
+    background-size: cover;
 }
 
 .counter_info-item{

@@ -4,8 +4,8 @@
     "toggleLang" : "ua",
     "mainPageTitle1" : "BELMAR",
     "mainPageTitle3" : "MARKETING",
-    "mainPageTitle2" : "FOR PARTNERS",
-    "mainPageSubtitle" : "There is no such thing as low-quality traffic — there are wrong partners. You will forget about all possible traffic problems by working with us because we know how to simplify complex workflows. Therefore, our team of professionals will ensure that you can enjoy the process of making a profit without any unnecessary worries.\nCreated by webmasters for webmasters.\n",
+    "mainPageTitle2" : "FOR AFFILIATES",
+    "mainPageSubtitle" : "Partners are not the ones who convert traffic poorly but the traffic requires individual optimization. Working with us, you will be able to build an optimal structure in working with each GEO. Our team solves all complex tasks quickly and competently, so working with us you will get not only a stable profit but also the pleasure of working with professionals. Created by webmasters for webmasters.",
     "mainPagePartnersTitle" : "Our sources",
     "mainPagePartnersList" : ["Partner1","Partner2","Partner3","Partner4"],
     "mainPagePartnersMainTitle" : ["REALIZE"," YOUR BRAVEST IDEAS"," WITH US"],
@@ -17,6 +17,8 @@
     "mainPageAdvantegesList" : ["A reliable affiliate platform for your earnings","Direct or exclusive offers","24/7 support service ","Real-time optimization", "We accept all traffic sources"],
     "aboutTopTitle" : "ABOUT US",
     "aboutMainTitle" : "Let's move together with BelmarMarketing and unleash the potential with our joint efforts",
+    "preReviewInfoTitle": "FIRST HUMAN, THEN BUSINESS",
+    "preReviewInfoText": "In our professional cooperation with clients, we put human relationships above business. Our priority is establishing quality communication and understanding between both parties. That is why we are guided by the principle of Human to Human, putting Business to Business in second place.",
     "aboutMainText" : "Many years of experience creating successful crypto vertical projects allowed us to create an affiliate program with impeccable service and approach to work processes.\nWe fight for quality traffic for advertisers and help webmasters get the most favorable offers.\nWe do not follow the market. We set new standards for it.\n",
     "achievement" : [
       {
@@ -69,6 +71,11 @@
     ],
     "eventsList" : [
       {
+        "title" : "Looking forward to seeing you at the Paradise Group Meetup",
+        "location" : "Kyiv, Ukraine",
+        "date" : "10 August, 2023"
+      },
+      {
         "title" : "WE'RE GOING TO AFFILIATE WORLD AGAIN!",
         "location" : "Barcelona, Spain",
         "date" : "12-13 July, 2023"
@@ -96,7 +103,7 @@
       {
         "title" : "LET'S MEET AT AFFILIATE WORLD IN ASIA!",
         "location" : "Bangkok, Thailand",
-        "date" : "7-8 December, 2023"
+        "date" : "7-8 December, 2022"
       }
     ],
     "thanksTitle" : "sent",
