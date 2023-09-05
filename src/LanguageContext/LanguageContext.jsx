@@ -8,9 +8,9 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
     const [toggleLang, setToggleLang] = useState('en');
-    const [affAdv, setAffAdv] = useState('adv');
+    const [affAdv, setAffAdv] = useState('aff');
     const [translations, setTranslations] = useState(enJsonAdv);
-    const [isToggleUser, setIsToggleUser] = useState(true);
+    const [isToggleUser, setIsToggleUser] = useState(false);
 
     const showText = (lang, affadv) => {
         if(lang == 'ua' && affadv == 'aff'){
@@ -52,13 +52,13 @@ export const LanguageProvider = ({ children }) => {
         (langNow == 'en' || langNow == 'ua') ? lang = langNow : lang = 'en';
 
         const affOrAdvNow = localStorage.getItem("affOrAdvNow");
-        (affOrAdvNow == 'aff' || affOrAdvNow == 'adv') ? affadv = affOrAdvNow : affadv = 'adv';
+        (affOrAdvNow == 'aff' || affOrAdvNow == 'adv') ? affadv = affOrAdvNow : affadv = 'aff';
         // console.log('use effect' , lang , affadv)
         showText(lang , affadv);
     },[]);
 
     return (
-        <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv, isToggleUser }}>
+        <LanguageContext.Provider value={{ translations, changeLanguage, changeAffAdv, isToggleUser, toggleLang }}>
             {children}
         </LanguageContext.Provider>
     );

@@ -3,9 +3,9 @@
     grid-template-columns: 300px auto;
     grid-template-rows: 50vh;
     border-bottom: 1px solid #f1f1f1;
-    /*background: url("../../images/space.jpg");*/
-    /*background-size: contain;*/
-    background: none;
+    background: url("../../images/space.jpg");
+    background-size: contain;
+    /*background: none;*/
 
 }
 

@@ -14,7 +14,7 @@
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 5px dashed #00c853;
+    border: 5px dashed #0be867;
     margin: 2rem;
     animation: moveCircle 10s linear infinite;
     /*transform: skew(30deg,30deg) rotate(0deg);*/
@@ -61,7 +61,7 @@
     .cirkle_1111 {
         width: 60px;
         height: 60px;
-        border: 2px dashed #00c853;
+        border: 2px dashed #0be867;
     }
     .cirkle_2222 {
         width: 60px;

@@ -7,8 +7,8 @@ export default function CompanyContactList(){
                 <h3 className='company_contacts_list-title'>
                     Linkedin
                 </h3>
-                <a target="_blank" href="https://www.linkedin.com/in/alisa-liedovskykh-78329b241/" className='company_contacts_list-example'>alisa-liedovskykh</a>
-                <a target="_blank" href="https://www.linkedin.com/in/alisa-liedovskykh-78329b241/" className='company_contacts_list-href'>explore</a>
+                <a target="_blank" href="https://www.linkedin.com/in/belmar-marketing-78329b241/" className='company_contacts_list-example'>belmar-marketing</a>
+                <a target="_blank" href="https://www.linkedin.com/in/belmar-marketing-78329b241/" className='company_contacts_list-href'>explore</a>
             </div>
             <div className='company_contacts_list_item'>
                 <h3 className='company_contacts_list-title'>

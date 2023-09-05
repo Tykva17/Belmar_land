@@ -6,13 +6,13 @@ import {useContext} from "react";
 export default function HedaderToggSide(){
 
     const { changeAffAdv } = useContext(LanguageContext);
-    const [isToggled, toggle] = useState(true); // aff ==> false , adv ==> true
+    const [isToggled, toggle] = useState(false); // aff ==> false , adv ==> true
 
     useEffect(() => {
 
         setTimeout(()=>{
             const affOrAdvNow = localStorage.getItem("affOrAdvNow");
-            (affOrAdvNow == 'aff') ? toggle(false) : toggle(true);
+            (affOrAdvNow == 'adv') ? toggle(true) : toggle(false);
             console.log('isToggled hedader',isToggled, affOrAdvNow)
         },1500)
 

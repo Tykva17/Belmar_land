@@ -61,7 +61,7 @@ span.hedader_togg_side_span:before {
 }
 
 input.hedader_togg_side_input:checked + span.hedader_togg_side_span {
-    background-color: #00c853;
+    background-color: #2de278;
 }
 
 input.hedader_togg_side_input:checked + span.hedader_togg_side_span:before {

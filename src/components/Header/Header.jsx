@@ -2,14 +2,14 @@ import {useNavigate} from "react-router-dom";
 import './header.css';
 import menuBtn from '../../images/mdi-light_menu.png';
 import mobMenuClose from '../../images/mob-close.svg';
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import classnames from "classnames";
 import LanguageContext from "../../LanguageContext/LanguageContext";
 
 
 export default function Header(){
-    const { translations, changeLanguage } = useContext(LanguageContext);
-    const [langOn, setLangOn] = useState(false)
+    const { translations, changeLanguage, toggleLang } = useContext(LanguageContext);
+    const [langOn, setLangOn] = useState(localStorage.getItem("langNow"));
 
     const [showMenu, setShowMenu] = useState(false);
     const [activeItem, setActiveItem] = useState('home');
@@ -23,21 +23,55 @@ export default function Header(){
         setShowMenu(false);
     };
 
-    const toggleLanguage = () => {
-        setLangOn(!langOn);
-        langOn ? changeLanguage('en') : changeLanguage('ua');
+    const toggleLanguage = (lang) => {
+        setLangOn(lang)
+        changeLanguage(lang);
+        console.log('toggleLang  ' + toggleLang)
+        console.log('lang  ' + lang)
     };
 
     const menuToggler = () => {
         setShowMenu(!showMenu);
     }
 
+    const headerLogo = {
+        desk : require('../../images/logo.png'),
+        mob : require('../../images/logo_mob.png')
+    }
+
+    const [isMobileLogo , setIsMobileLogo] = useState(false)
+
+    useEffect(() => {
+        console.log(headerLogo)
+        const mediaQuery = window.matchMedia('(max-width: 480px)'); // Установите нужный вам медиа-запрос
+        const handleResize = (event) => {
+            setIsMobileLogo(event.matches);
+        };
+        mediaQuery.addListener(handleResize);
+        setIsMobileLogo(mediaQuery.matches);
+        return () => {
+            mediaQuery.removeListener(handleResize);
+        };
+
+    }, []);
+
+
+
 
     return(
             <div className='header'>
                 <div className='logo'>
-                    <h1 onClick={() => handleAlbumClick('')}>Belmar</h1>
-                    <span onClick={() => handleAlbumClick('')}>marketing</span>
+                    { isMobileLogo ?
+                        (
+                            <img onClick={() => handleAlbumClick('')} src={headerLogo.mob} alt='Belmar'/>
+                        )
+                        :
+                        (
+                            <img onClick={() => handleAlbumClick('')} src={headerLogo.desk} alt='Belmar'/>
+                        )
+                    }
+                    {/*<h1 onClick={() => handleAlbumClick('')}>Belmar</h1>*/}
+                    {/*<span onClick={() => handleAlbumClick('')}>marketing</span>*/}
                 </div>
                 <div className='navbar_links'>
                     <div className="navbar_links_container">
@@ -50,7 +84,8 @@ export default function Header(){
                     <div className='navbar_link_mob'>
                         <img onClick={menuToggler} src={menuBtn} alt=""/>
                     </div>
-                    <h1 onClick={toggleLanguage}>{translations.toggleLang}</h1>
+                    {/*<h1 onClick={toggleLanguage}>{`>${translations.toggleLang}`}</h1>*/}
+                    <h1><span className={langOn == 'en' ? 'active_lang' : ''} onClick={() => toggleLanguage('en')}>en</span> | <span className={langOn == 'ua' ? 'active_lang' : ''} onClick={() => toggleLanguage('ua')}>ua</span></h1>
                 </div>
                 {
                     showMenu ? (

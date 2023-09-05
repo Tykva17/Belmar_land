@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 0 3rem;
     min-height: 350px;
+    background-color: #1f1f1f;
 }
 .page_about_prefooter_box{
     flex: 50% 1;

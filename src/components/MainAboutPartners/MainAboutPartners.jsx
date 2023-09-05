@@ -46,7 +46,7 @@ export default function MainAboutPartners({isMobileTitle}){
                 (<div className='main_about_partners_list'>
                     {
                         imgSourceArr.map((e,i)=>{
-                            console.log(i)
+                            // console.log(i)
                             return(
                                 <div key={i} className={i === activeIndex ? 'main_about_partners_list_item active' : 'main_about_partners_list_item'}><img src={e.comp_logo} alt="company logo"/></div>
                             )

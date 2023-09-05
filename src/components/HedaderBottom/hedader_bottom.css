@@ -79,11 +79,11 @@
 .hedader_bottom_shin{
     width: 100%;
     background: #f53a5f;
-    box-shadow: 0 -90px 70px -120px #05bbbb inset,
-    0 -120px 70px -220px #b1ef32 inset,
+    box-shadow: 0 -120px 70px -220px #b1ef32 inset,
     0 -420px 70px -220px #ce42de inset;
     animation: background 4s infinite alternate;
 }
+
 
 /*@keyframes background {*/
 /*    0% {*/
@@ -97,7 +97,6 @@
     50% {
         background: darkviolet;
         box-shadow: 0 -240px 70px -120px mediumorchid inset,
-        0 -280px 70px -120px teal inset,
         0 -380px 70px -120px #f54ff5 inset;
     }
 }

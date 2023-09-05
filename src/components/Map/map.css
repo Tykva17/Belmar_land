@@ -9,3 +9,13 @@
     stroke: #7C7C7C;
     stroke-width: 1px;
 }
+
+.map_box :hover{
+    fill: #0be867;
+}
+
+.country_name{
+    color: #0be867;
+    font-size: 2rem;
+    font-weight: bold;
+}

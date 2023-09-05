@@ -29,8 +29,8 @@
 
 .main_about_partners_list_item.active img{
     /*fill: #A1147A;*/
-    -webkit-filter: invert(72%) sepia(94%) saturate(286%) hue-rotate(87deg) brightness(98%) contrast(92%);
-    filter: invert(72%) sepia(94%) saturate(286%) hue-rotate(87deg) brightness(98%) contrast(92%);
+    -webkit-filter: brightness(0) saturate(100%) invert(73%) sepia(37%) saturate(820%) hue-rotate(87deg) brightness(92%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(73%) sepia(37%) saturate(820%) hue-rotate(87deg) brightness(92%) contrast(99%);
 }
 
 @media all and (max-width: 480px){

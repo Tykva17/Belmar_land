@@ -8,10 +8,9 @@ import Events from "./pages/Events";
 import Contacts from "./pages/Contacts";
 import Footer from "./components/Footer/Footer";
 import { LanguageProvider } from './LanguageContext/LanguageContext';
-import Cirkle from "./components/Map/Cirkle";
-import Map from "./components/Map/Map";
-import Preloader from "./components/Preloader/Preloader";
-import ParalaxExample from "./components/Map/ParalaxExample";
+
+import SvgMap from "./components/Map/SvgMap";
+
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
               <Route path="/about_us" element={<AboutUs />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contacts" element={<Contacts />} />
-              <Route path="/cirkle" element={<ParalaxExample />} />
+              <Route path="/cirkle" element={<SvgMap />} />
             </Routes>
               <Footer/>
           </Router>
